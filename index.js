@@ -36,7 +36,7 @@ program
   .option('-i, --id <id>', 'the id stored in the ~/.cncrc file')
   .option('-n, --name <name>', 'the user name stored in the ~/.cncrc file')
   .option('-s, --secret <secret>', 'the secret key stored in the ~/.cncrc file')
-  .option('-p, --port <port>', 'path or name of serial port', '/dev/ttyACM0')
+  .option('-p, --port <port>', 'path or name of serial port', '/dev/ttyUSB0')
   .option('-b, --baudrate <baudrate>', 'baud rate', '115200')
   .option('-c, --config <filepath>', 'set the config file', '')
   .option('-o, --out-dir <path>', 'path to directory where to write output files, if not present output file is not written to disk', '')
@@ -63,7 +63,7 @@ var options = {
 
 var defaults = {
   secret: process.env['CNCJS_SECRET'],
-  port: '/dev/ttyACM0',
+  port: '/dev/ttyUSB0',
   baudrate: 115200,
   socketAddress: 'localhost',
   outDir: '',
